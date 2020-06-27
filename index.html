@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SignUp</title>
+	<script src="https://kit.fontawesome.com/f5dbfedadd.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type='text/javascript' src='js/script.js'></script>
+</head>
+<body>
+	<div class="container">
+		<input type="password" class="password" placeholder="Enter your password" oninput="textChange()" required>
+		<i class="fas fa-eye" id="show_hide" onclick="showHode()"></i>
+		<p id="capital">
+			<i class="fas fa-times"></i>
+			<i class="fas fa-check"></i>
+			<span>Capital letters</span>
+		</p>
+		<p id="char">
+			<i class="fas fa-times"></i>
+			<i class="fas fa-check"></i>
+			<span>Special characters</span>
+		</p>
+		<p id="num">
+			<i class="fas fa-times"></i>
+			<i class="fas fa-check"></i>
+			<span>Using numbers</span>
+		</p>
+		<p id="more8">
+			<i class="fas fa-times"></i>
+			<i class="fas fa-check"></i>
+			<span>8+ characters</span>
+		</p>
+	</div>
+</body>
+</html>

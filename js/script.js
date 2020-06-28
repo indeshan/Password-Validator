@@ -1,37 +1,38 @@
-
-let show_hide = document.querySelector("#show_hide");
 function showHide() {
-	if (show_hide.className == "fas fa-eye") {
-		show_hide.className == "fas fa-eye-slash";
+	let show_hide = document.querySelector("#show_hide");
+	let password = document.querySelector(".password");
+	if (show_hide.className === "fas fa-eye") {
+		show_hide.className = "fas fa-eye-slash";
 		password.type = "text";
 	}
 	else {
-		show_hide.className == "fas fa-eye";
+		show_hide.className = "fas fa-eye";
 		password.type = "password";	
 	}
 }
 
-const password = document.querySelector(".password");
 
 function valid(item, v_icon, inv_icon) {
-	let text = document.querySelector("#${item}");
-	text.style.opcity = "1";
-	let valid_icon = document.querySelector("#${item} .${v_icon}");
-	valid_icon.style.opcity = "1";
-	let invalid_icon = document.querySelector("#${item} .${inv_icon}");
-	invalid_icon.style.opcity = "0";
+	let text = document.querySelector("#"+item);
+	console.log(text);
+	text.style.opacity = "1";
+	let valid_icon = document.querySelector("#"+item+" "+"."+v_icon);
+	valid_icon.style.opacity = "1";
+	let invalid_icon = document.querySelector("#"+item+" "+"."+inv_icon);
+	invalid_icon.style.opacity = "0";
 }
 
 function invalid(item, v_icon, inv_icon) {
-	let text = document.querySelector("#${item}");
-	text.style.opcity = ".5";
-	let valid_icon = document.querySelector("#${item} .${v_icon}");
-	valid_icon.style.opcity = "0";
-	let invalid_icon = document.querySelector("#${item} .${inv_icon}");
-	invalid_icon.style.opcity = "1";
+	let text = document.querySelector("#"+item);
+	text.style.opacity = ".5";
+	let valid_icon = document.querySelector("#"+item+" "+"."+v_icon);
+	valid_icon.style.opacity = "0";
+	let invalid_icon = document.querySelector("#"+item+" "+"."+inv_icon);
+	invalid_icon.style.opacity = "1";
 }
 
 function textChange() {
+	let password = document.querySelector(".password");
 	if (password.value.match(/[A-Z]/) != null) {
 		valid("capital", "fa-check", "fa-times");	
 	}
